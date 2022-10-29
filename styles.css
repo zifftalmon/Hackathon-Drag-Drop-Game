@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+}
+
+body {
+    background-image: url("Exhibition-Image.jpeg");
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 45px;
+    color: rgb(209, 215, 215);
+    padding: 20px;
+}
+
+#paintings {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#monaLisa {
+    width: 150px;
+    height: 100px;
+    margin: 20px;
+}
+
+#mondrian {
+    width: 18vw;
+    height: 19vh;
+    margin: 20px;
+
+}
+#renoir {
+    width: 150px;
+    height: 140px;
+    margin: 20px;
+
+}
+#caravaggio {
+    width: 100px;
+    height: 200px;
+    margin: 20px;
+
+}
