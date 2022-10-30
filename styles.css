@@ -1,47 +1,63 @@
 * {
     margin: 0;
-}
-
-body {
-    background-image: url("Exhibition-Image.jpeg");
-    background-repeat: no-repeat;
-    background-size:cover;
+    background-color: #52ac8f;
 }
 
 h1 {
     text-align: center;
     font-family: 'Poppins', sans-serif;
-    font-size: 45px;
-    color: rgb(209, 215, 215);
+    font-size: 35px;
+    color: hsl(287, 40%, 30%);
     padding: 20px;
+    
 }
 
 #paintings {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    justify-items: center;
     align-items: center;
+    margin: 0 120px;
 }
 #monaLisa {
-    width: 150px;
-    height: 100px;
-    margin: 20px;
+    width: 200px;
+    height: 200px;
+    border-radius: 3px;
 }
 
 #mondrian {
-    width: 18vw;
-    height: 19vh;
-    margin: 20px;
-
+    width: 200px;
+    height: 200px;
+    border-radius: 3px;
 }
 #renoir {
-    width: 150px;
-    height: 140px;
-    margin: 20px;
+    width: 200px;
+    height: 200px;
+    border-radius: 3px;
 
 }
 #caravaggio {
-    width: 100px;
+    width: 200px;
     height: 200px;
-    margin: 20px;
+    border-radius: 3px;
 
+
+}
+#frames {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(2,1fr);
+    justify-items: center;
+    align-items: center; 
+}
+.dropFrame {
+    border: 10px double black;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+}
+#frames div > h2 {
+    margin-bottom: 150px;
+    font-family: 'Poppins', sans-serif;
 }
