@@ -20,6 +20,8 @@ let dropTargetId;
 
 let matchCounter = 0;
 
+let unMatchCounter = 0;
+
 function startDragging (event) {
     event.dataTransfer.setData("image", event.target.id)
     selectedId = this.id
@@ -43,7 +45,11 @@ function draggingOver(event) {
 
 const target = document.querySelectorAll(".dropFrame");
 
-let banner = document.getElementById("banner");
+let bannerOne = document.getElementById("bannerOne");
+
+let bannerTwo = document.getElementById("bannerTwo");
+
+
 
 function dropOnTarget (event) {
     event.preventDefault();
@@ -57,10 +63,16 @@ function dropOnTarget (event) {
     console.log(matchCounter);
     } else {
         document.getElementById(dropTargetId).style.background = "red";
+        unMatchCounter++
+        console.log(unMatchCounter);
     };
 
     if (matchCounter === 4) {
-        banner.style.visibility = "visible";
+        bannerOne.style.visibility = "visible";
+    }
+
+    if (unMatchCounter >= 2 || unMatchCounter > 3) {
+        bannerTwo.style.visibility = "visible";
     }
 }
 
@@ -103,5 +115,10 @@ let clearBtn = document.getElementById("clearButton");
 }
 clearBtn.addEventListener("click", clearPage)
 
+let clearBtnTwo = document.getElementById("clearButtonTwo");
+    function clearPage() {
+    window.location.reload();
+}
+clearBtnTwo.addEventListener("click", clearPage)
 
  
