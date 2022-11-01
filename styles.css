@@ -68,7 +68,7 @@ h1 {
     align-items: center;
 }
 
-#banner {
+.banner {
     position: absolute;
     display: flex;
     justify-content: center;
@@ -81,7 +81,7 @@ h1 {
 
 }
 
-#endBanner {
+.endBanner {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -96,13 +96,13 @@ h1 {
     border-radius: 10px;
 }
 
-#endBanner h3 {
+.endBanner h3 {
     background-color: #2F4858;
     border-radius: 10px;
     
 }
 
-#banner button {
+.banner button {
     font-weight: bold;
     font-family: 'poppins', sans-serif;
     margin: 30px;
