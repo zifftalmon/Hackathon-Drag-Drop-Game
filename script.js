@@ -14,9 +14,14 @@ boxTwo.addEventListener("dragstart", startDragging);
 boxThree.addEventListener("dragstart", startDragging);
 boxFour.addEventListener("dragstart", startDragging);
 
+let selectedId;
+
+let dropTargetId;
+
 function startDragging (event) {
     event.dataTransfer.setData("image", event.target.id)
-    console.log("yes");
+    selectedId = this.id
+    console.log(selectedId);
 }
 
 function modifyDropZones () {
@@ -34,10 +39,50 @@ function draggingOver(event) {
     event.preventDefault();
 }
 
+const target = document.querySelectorAll(".dropFrame");
+
 function dropOnTarget (event) {
-    event.preventDefault();
-    event.target.style.background = "#1f5e4a";
     const dataId = event.dataTransfer.getData("image");
-    const getImage =document.getElementById(dataId);
+    const getImage = document.getElementById(dataId);
     event.target.appendChild(getImage);
+    dropTargetId = this.id;
+    if (checkForMatch (selectedId, dropTargetId)) {
+    document.getElementById(dropTargetId).style.background = "#224d40";
+    } else {
+        document.getElementById(dropTargetId).style.background = "red";
+    };
 }
+
+
+let paintZone = document.getElementById("paintings");
+
+paintZone.addEventListener("dragover", draggingOver);
+
+paintZone.addEventListener("drop", dropBack);
+
+function dropBack (event) {
+    event.preventDefault();
+    const dataId = event.dataTransfer.getData("image");
+    const getimage = document.getElementById(dataId);
+    event.target.appendChild(getimage);
+}
+
+function checkForMatch (selected, dropTarget) {
+    switch (selected) {
+        case (boxOne.id) :
+            return dropTarget === target[0].id ? true : false;
+
+        case (boxTwo.id) :
+            return dropTarget === target[1].id ? true : false;
+
+        case (boxThree.id) :
+            return dropTarget === target[2].id ? true : false;
+
+        case (boxFour.id) :
+            return dropTarget === target[3].id ? true : false;
+
+            
+    }
+}
+
+checkForMatch();
