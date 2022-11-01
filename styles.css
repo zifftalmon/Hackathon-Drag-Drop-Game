@@ -1,17 +1,17 @@
+/*STYLE FOR THE BODY*/
 * {
     margin: 0;
     background-color: #52ac8f;
 }
-
+/*STYLE FOR TITLE*/
 h1 {
     text-align: center;
     font-family: 'Poppins', sans-serif;
     font-size: 35px;
     color: #5e2e6b;
     padding: 20px;
-    
 }
-
+/*STYLE FOR PAINTINGS DIV*/
 #paintings {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -19,30 +19,31 @@ h1 {
     justify-items: center;
     align-items: center;
 }
+/*STYLE FOR EACH PAINTING*/
 #monaLisa {
     width: 200px;
     height: 200px;
     border-radius: 3px;
 }
-
+/*STYLE FOR EACH PAINTING*/
 #mondrian {
     width: 200px;
     height: 200px;
     border-radius: 3px;
 }
+/*STYLE FOR EACH PAINTING*/
 #renoir {
     width: 200px;
     height: 200px;
     border-radius: 3px;
-
 }
+/*STYLE FOR EACH PAINTING*/
 #caravaggio {
     width: 200px;
     height: 200px;
     border-radius: 3px;
-
-
 }
+/*STYLE FOR FRAMES DIV*/
 #frames {
     display: grid;
     grid-template-columns: repeat(4,1fr);
@@ -50,24 +51,19 @@ h1 {
     justify-items: center;
     align-items: center; 
 }
+/*STYLE FOR EACH DROP ZONE*/
 .dropFrame {
     border: 10px double black;
     width: 200px;
     height: 200px;
     border-radius: 10px;
 }
+/*STYLE FOR FRAMES TITLES OF EACH PAINTER*/
  h2 {
     margin-bottom: 150px;
     font-family: 'Poppins', sans-serif;
 }
-
-#newGame {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-}
-
+/*STYLE FOR THE BANNER DIVS*/
 .banner {
     position: absolute;
     display: flex;
@@ -78,9 +74,8 @@ h1 {
     visibility: hidden;
     background-color: #2F4858;
     border-radius: 20px;;
-
 }
-
+/*STYLE FOR THE CONTENT OF THE BANNER DIVS*/
 .endBanner {
     display: flex;
     flex-direction: column;
@@ -95,13 +90,12 @@ h1 {
     background-color: #2F4858;
     border-radius: 10px;
 }
-
+/*STYLE FOR THE TITLE OF THE BANNER DIVS*/
 .endBanner h3 {
     background-color: #2F4858;
-    border-radius: 10px;
-    
+    border-radius: 10px;   
 }
-
+/*STYLE FOR THE BUTTON IN THE BANNER DIVS*/
 .banner button {
     font-weight: bold;
     font-family: 'poppins', sans-serif;
