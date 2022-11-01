@@ -7,7 +7,7 @@ h1 {
     text-align: center;
     font-family: 'Poppins', sans-serif;
     font-size: 35px;
-    color: hsl(287, 40%, 30%);
+    color: #5e2e6b;
     padding: 20px;
     
 }
@@ -59,4 +59,19 @@ h1 {
  h2 {
     margin-bottom: 150px;
     font-family: 'Poppins', sans-serif;
+}
+
+#newGame {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+#newGame button {
+    position: relative;
+    bottom: 100px;
+    width: 150px;
+    height: 75px;
+    background-color: #5e2e6b;
+    font-size: 30px;
 }
