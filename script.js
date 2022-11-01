@@ -43,6 +43,8 @@ function draggingOver(event) {
 
 const target = document.querySelectorAll(".dropFrame");
 
+let banner = document.getElementById("banner");
+
 function dropOnTarget (event) {
     event.preventDefault();
     const dataId = event.dataTransfer.getData("image");
@@ -58,7 +60,7 @@ function dropOnTarget (event) {
     };
 
     if (matchCounter === 4) {
-        alert ("congratulations")
+        banner.style.visibility = "visible";
     }
 }
 
@@ -100,4 +102,6 @@ let clearBtn = document.getElementById("clearButton");
     window.location.reload();
 }
 clearBtn.addEventListener("click", clearPage)
+
+
  
