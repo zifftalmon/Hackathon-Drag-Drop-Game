@@ -18,6 +18,8 @@ let selectedId;
 
 let dropTargetId;
 
+let matchCounter = 0;
+
 function startDragging (event) {
     event.dataTransfer.setData("image", event.target.id)
     selectedId = this.id
@@ -42,15 +44,22 @@ function draggingOver(event) {
 const target = document.querySelectorAll(".dropFrame");
 
 function dropOnTarget (event) {
+    event.preventDefault();
     const dataId = event.dataTransfer.getData("image");
     const getImage = document.getElementById(dataId);
     event.target.appendChild(getImage);
     dropTargetId = this.id;
     if (checkForMatch (selectedId, dropTargetId)) {
     document.getElementById(dropTargetId).style.background = "#224d40";
+    matchCounter++
+    console.log(matchCounter);
     } else {
         document.getElementById(dropTargetId).style.background = "red";
     };
+
+    if (matchCounter === 4) {
+        alert ("congratulations")
+    }
 }
 
 
@@ -84,5 +93,11 @@ function checkForMatch (selected, dropTarget) {
             
     }
 }
-
 checkForMatch();
+
+let clearBtn = document.getElementById("clearButton");
+    function clearPage() {
+    window.location.reload();
+}
+clearBtn.addEventListener("click", clearPage)
+ 
