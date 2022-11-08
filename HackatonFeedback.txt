@@ -1,0 +1,10 @@
+
+
+Hello Ziff this is the Hackaton feedback.
+
+The game was simple I liked and the implementation of events listener on it. Very good implementation of the array and objects methods to.
+the styling on the page was also accurate with the subject. Well done using the drag and drop events to.
+Also you use DOM manipulation very well. 
+Congratulations on your project keep working hard. 
+
+
