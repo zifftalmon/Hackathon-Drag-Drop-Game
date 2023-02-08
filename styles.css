@@ -105,3 +105,43 @@ h1 {
     background-color: #5e2e6b;
     font-size: 20px;
 }
+
+@media screen and (min-width: 320px) and (max-width: 770px) {
+    h1 {
+        font-size: 25px;
+    }
+    #paintings {
+        grid-template-columns: repeat(4,150px);
+        justify-content: center;
+        margin: 0;
+    }
+    #monaLisa {
+        width: 100px;
+        height: 100px;
+    }
+    #mondrian {
+        width: 100px;
+        height: 100px;
+    }
+    #renoir {
+        width: 100px;
+        height: 100px;
+    }
+    #caravaggio {
+        width: 100px;
+        height: 100px;
+    }
+    #frames {
+        justify-content: center;
+        grid-template-columns: repeat(4,150px);
+        margin: 0;
+    }
+    .dropFrame {
+        width: 100px;
+        height: 100px;
+        margin: 0 2px;
+    }
+    h2 {
+        text-align: center;
+    }
+}
